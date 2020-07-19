@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="./styles/index.css">
     </head>
 
-    <body onload="insert_components()">
+    <body onload="insert_components();insert_post_modal()">
         <!-- TODO: Include all your code for the header and home page here -->
         <div id="header-space" class='container header-container'></div>
         
@@ -26,8 +26,21 @@
         <div id="modal-signup" class="modal"></div>
         <div id="modal-signin" class="modal"></div>
 
-    <script src="./scripts/common.js"></script>
-    <script src="./scripts/index.js" n></script>
+        <!-- create post modal -->
+        <div id="modal-create-post" class="modal"></div>
+
+        <!-- home page content -->
+        <div class="post-buttons">
+            <button type="button" class="btn btn-primary button-class post-button"
+            onclick="window.location.href='html/postslist.html'">All Posts
+            </button>
+            <button type="button" class="btn btn-primary button-class post-button"
+            onclick="modal_dialog('modal-create-post','block')">Create Post
+            </button>
+        </div>
+
+        <script src="./scripts/common.js"></script>
+        <script src="./scripts/index.js" n></script>
     </body>
 
 </html>
